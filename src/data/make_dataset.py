@@ -1,3 +1,4 @@
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
@@ -81,3 +82,4 @@ if __name__ == '__main__':
         download_article(links_art)
     finally:
         driver.quit() 
+
