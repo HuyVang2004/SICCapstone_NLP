@@ -10,25 +10,6 @@ import pandas as pd
 import time
 import requests
 
-# Hàm lấy liên kết từ menu
-"""
-def get_menu():
-    links_menu = []
-    driver.get('https://cafef.vn/')
-
-    menu_items = driver.find_elements(By.CSS_SELECTOR, '.acvmenu a, .menucategory_right a')
-
-    for item in menu_items:
-        try:
-            link = item.get_attribute('href')
-            if link and (link not in links_menu):
-                links_menu.append(link)
-        except NoSuchElementException as e:
-            print(f"Error extracting menu info: {e}")
-            pass
-
-    return links_menu
-"""
 
 def get_articles(driver, link):
     driver.get(link)
@@ -114,8 +95,8 @@ if __name__ == '__main__':
         'tai_chinh_quoc_te': 'https://m.cafef.vn/tai-chinh-quoc-te.chn',
         'kinh_te_vi_mo': 'https://cafef.vn/vi-mo-dau-tu.chn',
         'kinh_te_so': 'https://m.cafef.vn/kinh-te-so.chn',
-        'thi_truong': 'https://cafef.vn/thi-truong.chn',
-        'goc_nhin_chuyen_gia': 'https://cafef.vn/bai-viet-cua-cac-chuyen-gia.chn'
+        'thi_truong': 'https://m.cafef.vn/thi-truong.chn',
+        'goc_nhin_chuyen_gia': 'https://m.cafef.vn/bai-viet-cua-cac-chuyen-gia.chn'
     }
 
     mobile_emulation = {
