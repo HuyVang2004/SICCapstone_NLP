@@ -33,7 +33,7 @@ for i in range(len(nganhang_df)-30):
 nganhang_df.rename(columns={"date": "Date"}, inplace=True)
 
 # Đọc tập dữ liệu các bài báo đã kéo được từ trang CafeF https://cafef.vn/
-articles_data = pd.read_csv("../../data/raw/doanh_nghiep(1).csv")[["Published_Date", "Title", "Text"]].dropna()
+articles_data = pd.read_csv("../../data/raw/tai_chinh_ngan_hang.csv")[["Published_Date", "Title", "Text"]].dropna()
 articles_data["Published_Date"] = pd.to_datetime(articles_data["Published_Date"]).dt.strftime("%Y-%m-%d")
 articles_data.rename(columns={"Published_Date": "Date"}, inplace=True)
 articles_data.sort_values(by = 'Date', inplace=True)
